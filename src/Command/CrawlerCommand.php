@@ -54,5 +54,7 @@ class CrawlerCommand extends Command
         $data = (new Parser($websiteUrl))->parse($html);
 
         $output->writeln((new Formatter('csv'))->format($data));
+
+        return 1;
     }
 }
